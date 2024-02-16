@@ -1,33 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+button {
+  color: white;
+  text-transform: none;
+  border-radius: 16px;
+  padding: 10px 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.joke-button {
+  min-width: 200px;
+  background-color: #7BC06F;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.error-text {
+  color: #cc0408;
+  font-weight: bold;
+}
+
+.joke-display-col {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.joke-text-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+svg {
+  color: lightgray;
+  height: 70px;
+  width: auto;
+  opacity: .5;
+}
+
+.punchline-button-row {
+  display: flex;
+  justify-content: center;
+}
+
+button.punchline-button {
+  background-color: #2a7fbf;
+}
+
+.punchline-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-error-display {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
